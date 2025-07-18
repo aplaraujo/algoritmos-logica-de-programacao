@@ -23,5 +23,7 @@ public class Crescente {
             x = sc.nextInt();
             y = sc.nextInt();
         } while (x != y && y != x);
+
+        sc.close();
     }
 }
