@@ -16,7 +16,7 @@ public class Duracao {
         minuto = resto / 60;
         segundo = resto % 60;
 
-        System.out.println(hora + ":" + minuto + ":" + segundo);
+        System.out.println();
 
         sc.close();
 
