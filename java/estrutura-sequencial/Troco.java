@@ -1,4 +1,5 @@
 
+import entities.ObterTroco;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -7,20 +8,18 @@ public class Troco {
     Locale.setDefault(Locale.US);
     Scanner sc = new Scanner(System.in);
 
-    double preco, dinheiro, total, troco;
-    int quant;
+    ObterTroco troco;
+    troco = new ObterTroco();
 
     System.out.print("Preço unitário do produto: ");
-    preco = sc.nextDouble();
+    troco.preco = sc.nextDouble();
     System.out.print("Quantidade comprada: ");
-    quant = sc.nextInt();
+    troco.quantidade = sc.nextInt();
     System.out.print("Dinheiro recebido: ");
-    dinheiro = sc.nextDouble();
+    troco.dinheiro = sc.nextDouble();
 
-    total = preco * quant;
-    troco = dinheiro - total;
-
-    System.out.println("TROCO = " + String.format("%.2f", troco));
-
+    System.out.println(troco);
+    
+    sc.close();
   }  
 }
