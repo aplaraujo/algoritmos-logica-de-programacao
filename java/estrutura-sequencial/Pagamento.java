@@ -1,3 +1,4 @@
+import entities.ObterPagamento;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -6,20 +7,16 @@ public class Pagamento {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        String nome;
-        double valor_hora, salario;
-        int horas;
+        ObterPagamento pagamento = new ObterPagamento();
 
         System.out.print("Nome: ");
-        nome = sc.nextLine();
+        pagamento.nome = sc.nextLine();
         System.out.print("Valor por hora: ");
-        valor_hora = sc.nextDouble();
+        pagamento.valor_hora = sc.nextDouble();
         System.out.print("Horas trabalhadas: ");
-        horas = sc.nextInt();
+        pagamento.horas = sc.nextInt();
 
-        salario = valor_hora * horas;
-
-        System.out.println("O pagamento para " + nome + " deve ser " + String.format("%.2f", salario));
+        System.out.println(pagamento);
 
         sc.close();
     }
