@@ -1,4 +1,5 @@
 
+import entities.ObterConsumo;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -7,17 +8,14 @@ public class Consumo {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        int distancia;
-        double combustivel, consumo;
+        ObterConsumo consumo = new ObterConsumo();
 
         System.out.print("Distancia percorrida: ");
-        distancia = sc.nextInt();
+        consumo.distancia = sc.nextInt();
         System.out.print("Combustível gasto: ");
-        combustivel = sc.nextDouble();
+        consumo.combustivel = sc.nextDouble();
 
-        consumo = distancia / combustivel;
-
-        System.out.println("Consumo medio = " + String.format("%.3f", consumo));
+        System.out.println(consumo);
 
         sc.close();
     }
