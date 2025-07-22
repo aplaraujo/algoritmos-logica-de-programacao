@@ -1,5 +1,5 @@
 package entities;
 
-public class Troco {
+public class ObterTroco {
     
 }

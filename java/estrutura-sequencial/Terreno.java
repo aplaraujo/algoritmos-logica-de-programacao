@@ -1,4 +1,5 @@
 
+import entities.ObterTerreno;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -7,20 +8,20 @@ public class Terreno {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        double largura, comp, metro, area, preco;
+        ObterTerreno terreno;
+        terreno = new ObterTerreno();
 
         System.out.print("Digite a largura do terreno: ");
-        largura = sc.nextDouble();
+        terreno.l = sc.nextDouble();
         System.out.print("Digite o comprimento do terreno: ");
-        comp = sc.nextDouble();
+        terreno.c = sc.nextDouble();
         System.out.print("Digite o valor do metro quadrado: ");
-        metro = sc.nextDouble();
+        terreno.m = sc.nextDouble();
 
-        area = largura * comp;
-        preco = area * metro;
+        System.out.println();
+        System.out.println(terreno);
 
-        System.out.println("Area do terreno = " + String.format("%.2f", area));
-        System.out.println("Preco do terreno = " + String.format("%.2f", preco));
+        sc.close();
 
     }
 }

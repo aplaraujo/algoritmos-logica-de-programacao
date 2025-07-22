@@ -1,5 +1,5 @@
 package entities;
 
-public class Retangulo {
+public class ObterSoma {
     
 }
