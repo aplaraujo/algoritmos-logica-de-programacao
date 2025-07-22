@@ -1,3 +1,4 @@
+import entities.ObterDuracao;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -6,17 +7,13 @@ public class Duracao {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        int quant_seg, hora, minuto, segundo, resto;
+        ObterDuracao duracao = new ObterDuracao();
 
         System.out.print("Digite a duracao em segundos: ");
-        quant_seg = sc.nextInt();
+        duracao.quantidade_segundos = sc.nextInt();
 
-        hora = quant_seg / 3600;
-        resto = quant_seg % 3600;
-        minuto = resto / 60;
-        segundo = resto % 60;
-
-        System.out.println();
+       
+        System.out.println(duracao);
 
         sc.close();
 
