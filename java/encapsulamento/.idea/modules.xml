@@ -2,9 +2,22 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Celsius/Celsius.iml" filepath="$PROJECT_DIR$/Celsius/Celsius.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CompraTotal/CompraTotal.iml" filepath="$PROJECT_DIR$/CompraTotal/CompraTotal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Fatorial/Fatorial.iml" filepath="$PROJECT_DIR$/Fatorial/Fatorial.iml" />
       <module fileurl="file://$PROJECT_DIR$/Fibonacci/Fibonacci.iml" filepath="$PROJECT_DIR$/Fibonacci/Fibonacci.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ParOuImpar/ParOuImpar.iml" filepath="$PROJECT_DIR$/ParOuImpar/ParOuImpar.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Pessoa/Pessoa.iml" filepath="$PROJECT_DIR$/Pessoa/Pessoa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Potencia/Potencia.iml" filepath="$PROJECT_DIR$/Potencia/Potencia.iml" />
       <module fileurl="file://$PROJECT_DIR$/Prestacao/Prestacao.iml" filepath="$PROJECT_DIR$/Prestacao/Prestacao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/QuadradoSoma/QuadradoSoma.iml" filepath="$PROJECT_DIR$/QuadradoSoma/QuadradoSoma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Real/Real.iml" filepath="$PROJECT_DIR$/Real/Real.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RetornaPositivo/RetornaPositivo.iml" filepath="$PROJECT_DIR$/RetornaPositivo/RetornaPositivo.iml" />
       <module fileurl="file://$PROJECT_DIR$/Soma/Soma.iml" filepath="$PROJECT_DIR$/Soma/Soma.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SomaQuadrado/SomaQuadrado.iml" filepath="$PROJECT_DIR$/SomaQuadrado/SomaQuadrado.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ValorDivisivel/ValorDivisivel.iml" filepath="$PROJECT_DIR$/ValorDivisivel/ValorDivisivel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ValorDivisivelDois/ValorDivisivelDois.iml" filepath="$PROJECT_DIR$/ValorDivisivelDois/ValorDivisivelDois.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ValorDivisivelTres/ValorDivisivelTres.iml" filepath="$PROJECT_DIR$/ValorDivisivelTres/ValorDivisivelTres.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/encapsulamento.iml" filepath="$PROJECT_DIR$/.idea/encapsulamento.iml" />
     </modules>
   </component>
