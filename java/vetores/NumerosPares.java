@@ -1,3 +1,5 @@
+import entities.ExercicioNumerosPares;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -6,7 +8,7 @@ public class NumerosPares {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        int i, N, quant, soma;
+        int i, N, quant, soma, valor;
         double media;
 
         quant = 0;
@@ -15,16 +17,17 @@ public class NumerosPares {
         System.out.print("Quantos elementos vai ter o vetor? ");
         N = sc.nextInt();
 
-        int[] num = new int[N]; 
+        ExercicioNumerosPares[] num = new ExercicioNumerosPares[N];
 
         for (i = 0; i < N; i++) {
            System.out.print("Digite um numero: ");
-           num[i] = sc.nextInt();
+           valor = sc.nextInt();
+           num[i] = new ExercicioNumerosPares(valor);
         }
 
         for (i = 0; i < N; i++) {
-           if (num[i] % 2 == 0) {
-            soma = soma + num[i];
+           if (num[i].getNum() % 2 == 0) {
+            soma = soma + num[i].getNum();
             quant++;
            }
         }

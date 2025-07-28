@@ -1,4 +1,6 @@
 
+import entities.ExercicioMaiorPosicao;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -8,24 +10,25 @@ public class MaiorPosicao {
         Scanner sc = new Scanner(System.in);
 
         int i, N, posicao;
-        double maior;
+        double maior, valor;
 
         System.out.print("Quantos numeros voce vai digitar? ");
         N = sc.nextInt();
 
-        double[] num = new double[N];
+        ExercicioMaiorPosicao[] num = new ExercicioMaiorPosicao[N];
 
         for (i = 0; i < N; i++) {
             System.out.print("Digite um numero: ");
-            num[i] = sc.nextDouble();
+            valor = sc.nextDouble();
+            num[i] = new ExercicioMaiorPosicao(valor);
         }
 
         posicao = 0;
-        maior = num[0];
+        maior = num[0].getNum();
 
         for (i = 0; i < N; i++) {
-            if (num[i] > maior) {
-                maior = num[i];
+            if (num[i].getNum() > maior) {
+                maior = num[i].getNum();
                 posicao = i;
             }
         }

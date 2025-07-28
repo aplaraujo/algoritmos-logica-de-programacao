@@ -1,4 +1,6 @@
 
+import entities.ExercicioAbaixoDaMedia;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -8,30 +10,31 @@ public class AbaixoDaMedia {
         Scanner sc = new Scanner(System.in);
 
         int N, i;
-        double soma, media;
+        double soma, media, valor;
 
         soma = 0;
 
         System.out.print("Quantos elementos vai ter o vetor? ");
         N = sc.nextInt();
 
-        double[] num = new double[N];
+        ExercicioAbaixoDaMedia[] num = new ExercicioAbaixoDaMedia[N];
 
         for (i = 0; i < N; i++) {
            System.out.print("Digite um numero: ");
-           num[i] = sc.nextDouble();
+           valor = sc.nextDouble();
+           num[i] = new ExercicioAbaixoDaMedia(valor);
         }
 
         for (i = 0; i < N; i++) {
-            soma = soma + num[i];
+            soma = soma + num[i].getNum();
         }
 
         media = soma / N;
 
         System.out.println("ELEMENTOS ABAIXO DA MEDIA: ");
         for (i = 0; i < N; i++) {
-            if(num[i] < media) {
-               System.out.println(num[i]); 
+            if(num[i].getNum() < media) {
+               System.out.println(num[i].getNum());
             }
         }
 

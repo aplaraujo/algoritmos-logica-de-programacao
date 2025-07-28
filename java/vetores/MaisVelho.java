@@ -1,3 +1,5 @@
+import entities.ExercicioMaisVelho;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -6,7 +8,8 @@ public class MaisVelho {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
-        int i, N, maior, posicao;
+        int i, N, maior, posicao, idade;
+        String nome;
 
         maior = 0;
         posicao = 0;
@@ -14,25 +17,28 @@ public class MaisVelho {
         System.out.print("Quantas pessoas serao digitadas? ");
         N = sc.nextInt();
 
-        int[] idades = new int[N];
-        String[] nomes = new String[N];
+        ExercicioMaisVelho[] idades = new ExercicioMaisVelho[N];
+        ExercicioMaisVelho[] nomes = new ExercicioMaisVelho[N];
 
         for (i = 0; i < N; i++) {
            System.out.printf("Dados da %da pessoa:", i+1);
            System.out.println();
            System.out.print("Nome: ");
-           nomes[i] = sc.next();
+           nome = sc.next();
            System.out.print("Idade: ");
-           idades[i] = sc.nextInt();
+           idade = sc.nextInt();
+
+           nomes[i] = new ExercicioMaisVelho(nome);
+           idades[i] = new ExercicioMaisVelho(idade);
         }
 
         for (i = 0; i < N; i++) {
-            if (idades[i] > maior) {
-                maior = idades[i];
+            if (idades[i].getIdade() > maior) {
+                maior = idades[i].getIdade();
                 posicao = i;
             }
         }
 
-        System.out.printf("PESSOA MAIS VELHA: %s", nomes[posicao]);
+        System.out.printf("PESSOA MAIS VELHA: %s", nomes[posicao].getNome());
     }
 }

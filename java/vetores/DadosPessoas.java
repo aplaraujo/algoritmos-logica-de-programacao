@@ -1,3 +1,5 @@
+import entities.ExercicioDadosPessoas;
+
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -7,7 +9,8 @@ public class DadosPessoas {
         Scanner sc = new Scanner(System.in);
 
         int i, N, quant_homens, quant_mulheres;
-        double maior, menor, soma, media_mulheres;
+        char sexo;
+        double maior, menor, soma, media_mulheres, altura;
 
         quant_homens = 0;
         quant_mulheres = 0;
@@ -16,33 +19,35 @@ public class DadosPessoas {
         System.out.print("Quantas pessoas serao digitadas? ");
         N = sc.nextInt();
 
-        char[] genero = new char[N];
-        double[] alturas = new double[N];
+        ExercicioDadosPessoas[] genero = new ExercicioDadosPessoas[N];
+        ExercicioDadosPessoas[] alturas = new ExercicioDadosPessoas[N];
 
         for (i = 0; i < N; i++) {
-            System.out.printf("Altura da %da pessoa: %n", i);
-            alturas[i] = sc.nextDouble();
-            System.out.printf("Genero da %da pessoa: %n", i);
-            genero[i] = sc.next().charAt(0);
+            System.out.printf("Altura da %da pessoa: %n", i+1);
+            altura = sc.nextDouble();
+            System.out.printf("Genero da %da pessoa: %n", i+1);
+            sexo = sc.next().charAt(0);
+            alturas[i] = new ExercicioDadosPessoas(altura);
+            genero[i] = new ExercicioDadosPessoas(sexo);
 
-            if (genero[i] == 'M') {
+            if (genero[i].getGenero() == 'M') {
                 quant_homens++;
             } else {
-                soma = (double) alturas[i] + soma;
+                soma = (double) alturas[i].getAltura() + soma;
                 quant_mulheres++;
             }
         }
 
-        maior = alturas[0];
-        menor = alturas[0];
+        maior = alturas[0].getAltura();
+        menor = alturas[0].getAltura();
 
         for (i = 0; i < N; i++) {
-            if(alturas[i] > maior) {
-                maior = alturas[i];
+            if(alturas[i].getAltura() > maior) {
+                maior = alturas[i].getAltura();
             }
 
-            if(alturas[i] < menor) {
-                menor = alturas[i];
+            if(alturas[i].getAltura() < menor) {
+                menor = alturas[i].getAltura();
             }
         }
 
