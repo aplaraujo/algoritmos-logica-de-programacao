@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Blog/Blog.iml" filepath="$PROJECT_DIR$/Blog/Blog.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Months/Months.iml" filepath="$PROJECT_DIR$/Months/Months.iml" />
       <module fileurl="file://$PROJECT_DIR$/Order/Order.iml" filepath="$PROJECT_DIR$/Order/Order.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Week/Week.iml" filepath="$PROJECT_DIR$/Week/Week.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Worker/Worker.iml" filepath="$PROJECT_DIR$/Worker/Worker.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/enums.iml" filepath="$PROJECT_DIR$/.idea/enums.iml" />
     </modules>
   </component>
