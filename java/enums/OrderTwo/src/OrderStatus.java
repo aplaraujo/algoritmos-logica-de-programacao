@@ -1,4 +1,6 @@
-package PACKAGE_NAME;
-
 public enum OrderStatus {
+    PENDING_PAYMENT,
+    PROCESSING,
+    SHIPPED,
+    DELIVERED;
 }
