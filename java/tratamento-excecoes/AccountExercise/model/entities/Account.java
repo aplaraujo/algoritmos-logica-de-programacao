@@ -1,5 +1,7 @@
 package AccountExercise.model.entities;
 
+import AccountExercise.model.exceptions.DomainException;
+
 public class Account {
     private Integer number;
     private String holder;
@@ -43,7 +45,15 @@ public class Account {
         this.balance += amount;
     }
 
-    public void withdraw(Double amount) {
+    public void withdraw(Double amount) throws DomainException {
+        if (amount > withdrawLimit) {
+            throw new DomainException("The amount exceeds withdraw limit");
+        }
+
+        if (balance < withdrawLimit) {
+            throw new DomainException("Not enough balance");
+        }
+
         this.balance -= amount;
     }
 
