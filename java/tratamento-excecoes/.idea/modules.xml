@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/FinallyExample/FinallyExample.iml" filepath="$PROJECT_DIR$/FinallyExample/FinallyExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TryCatchExample/TryCatchExample.iml" filepath="$PROJECT_DIR$/TryCatchExample/TryCatchExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tratamento-excecoes.iml" filepath="$PROJECT_DIR$/.idea/tratamento-excecoes.iml" />
+    </modules>
+  </component>
+</project>
