@@ -10,7 +10,7 @@ public class Account {
 
     public Account() {}
 
-    public Account(Integer number, String holder, Double balance, Double withdrawLimit) throws DomainException {
+    public Account(Integer number, String holder, Double balance, Double withdrawLimit) throws DomainException  {
         if (balance < withdrawLimit) {
             throw new DomainException("Not enough balance");
         }
@@ -49,6 +49,12 @@ public class Account {
     }
 
     public void withdraw(Double amount) throws DomainException {
+        withdrawException(amount);
+
+        this.balance -= amount;
+    }
+
+    public void withdrawException(double amount) throws DomainException {
         if (amount > withdrawLimit) {
             throw new DomainException("The amount exceeds withdraw limit");
         }
@@ -56,8 +62,6 @@ public class Account {
         if (balance < withdrawLimit) {
             throw new DomainException("Not enough balance");
         }
-
-        this.balance -= amount;
     }
 
     @Override
