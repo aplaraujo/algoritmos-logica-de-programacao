@@ -10,7 +10,10 @@ public class Account {
 
     public Account() {}
 
-    public Account(Integer number, String holder, Double balance, Double withdrawLimit) {
+    public Account(Integer number, String holder, Double balance, Double withdrawLimit) throws DomainException {
+        if (balance < withdrawLimit) {
+            throw new DomainException("Not enough balance");
+        }
         this.number = number;
         this.holder = holder;
         this.balance = balance;
