@@ -1,10 +1,9 @@
 package exercicio.model.entities;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 
 public class CarRental {
-    private static final SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+    
     private LocalDateTime start;
     private LocalDateTime finish;
     private Vehicle vehicle;
