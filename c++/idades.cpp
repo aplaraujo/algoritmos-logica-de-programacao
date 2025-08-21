@@ -30,7 +30,7 @@ int main() {
 
     media = (double)(idade1 + idade2) / 2;
 
-    cout << "A idade média de Maria Silva e Joao Melo é " << fixed << setprecision(1) << media << " anos";
+    cout << "A idade média de " << nome1 << " e " << nome2 << " é " << fixed << setprecision(1) << media << " anos";
 
     return 0;
 }
